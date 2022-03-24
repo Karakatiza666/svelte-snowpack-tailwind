@@ -1,5 +1,5 @@
 # Update the VARIANT arg in devcontainer.json to pick a Node.js version: 14, 12, 10 
-ARG VARIANT=14
+ARG VARIANT=16
 # FROM node:${VARIANT}
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
@@ -14,3 +14,6 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
 # [Optional] Uncomment if you want to install more global node modules
 # RUN sudo -u node npm install -g <your-package-list-here>
+
+# Set the default shell to bash rather than sh
+ENV SHELL /bin/bash
